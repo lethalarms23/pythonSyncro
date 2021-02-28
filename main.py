@@ -8,15 +8,17 @@ import string
 
 def objeto(i):
     if i == 0:
-        mouse.position = (904,780) #Esquerda se for so 2 objetos
+        mouse.position = (874,773)
         mouse.click(Button.left, 1)
-        time.sleep(0.1)
+        time.sleep(0.07)
     elif i == 1:
-        mouse.position = (980,778) #Direita se for so 2 objetos
-        mouse.click(Button.left, 2)
-        time.sleep(0.1)
+        mouse.position = (952,777)
+        mouse.click(Button.left, 1)
+        time.sleep(0.07)
     elif i == 2:
-        print("Triangulo")
+        mouse.position = (1023, 776)
+        mouse.click(Button.left, 1)
+        time.sleep(0.07)
     else:
         print("Nenhum")
 mouse = Controller()
@@ -36,16 +38,14 @@ def pr(n,k,numTotal):
     if n < 1:
         for i in my_list:
             #print(i, end="")
-            if (counter != 1):
-               #objeto(i)
-               counter = counter - 1
-            else:
-               time.sleep(3)
-               for i in range(0, numTotal):
-                   mouse.position = (1202, 182)
-                   mouse.click(Button.left, 1)
-                   time.sleep(0.1)
-               counter = numTotal
+            #print()
+            objeto(i)
+        time.sleep(0.1)
+        for i in range(0, numTotal):
+            mouse.position = (1438, 185)
+            mouse.click(Button.left, 1)
+            time.sleep(0.07)
+
     else:
         for i in range(k):
             my_list[n - 1]=i
