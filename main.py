@@ -1,20 +1,19 @@
 import time
+import pyautogui
 from pynput.mouse import Button, Controller
 import itertools
 
 
 def objeto(i):
-    print("Objeto: ", num)
-    print("\n")
     if i == 0:
-        mouse.position = (884, 775)
-        mouse.click(Button.left, 1)
+        pyautogui.moveTo(884, 775)
+        pyautogui.click(clicks=1)
     elif i == 1:
-        mouse.position = (989, 778)
-        mouse.click(Button.left, 1)
+        pyautogui.moveTo(971, 775)
+        pyautogui.click(clicks=1)
     elif i == 2:
-        mouse.position = (1023, 776)
-        mouse.click(Button.left, 1)
+        pyautogui.moveTo(1023, 776)
+        pyautogui.click(clicks=1)
     else:
         print("Nenhum")
 
@@ -33,14 +32,8 @@ comb = list(itertools.product(listNum, repeat=numTotal))
 result = itertools.chain(comb)
 print(comb)
 for each in result:
-    time.sleep(0.1)
     for num in each:
-        time.sleep(0.1)
-        print(num)
         objeto(num)
-    print("\n")
-    time.sleep(0.5)
     for i in range(0, numTotal):
-            mouse.position = (1304, 182)
-            mouse.click(Button.left, 1)
-            time.sleep(0.1)
+            pyautogui.moveTo(1199, 181)
+            pyautogui.click(clicks=1)
