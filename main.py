@@ -1,15 +1,15 @@
 import time
 import pyautogui
+from numba import jit
 from pynput.mouse import Button, Controller
 import itertools
 
-
 def objeto(i):
     if i == 0:
-        pyautogui.moveTo(884, 775)
+        pyautogui.moveTo(912, 743)
         pyautogui.click(clicks=1)
     elif i == 1:
-        pyautogui.moveTo(971, 775)
+        pyautogui.moveTo(985, 742)
         pyautogui.click(clicks=1)
     elif i == 2:
         pyautogui.moveTo(1023, 776)
